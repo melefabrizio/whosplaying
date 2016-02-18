@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule api/utente/(.*)/(.*)$ api.php?request=utente&nome=$1&following=$2   [NC,L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule api/utente/(.*) api.php?request=utente&nome=$1   [NC,L]
+
+
+</IfModule>
