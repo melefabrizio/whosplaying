@@ -5,7 +5,7 @@ require_once  __ROOT__.'/meekrodb.2.2.class.php';
 require  __ROOT__.'/conf.php';
 include  __ROOT__.'/Rito.php';
 require_once  __ROOT__.'/APIClass.class.php';
-include_once('./ConcreteApi.php');
+include_once(__ROOT_.'/ConcreteAPI.php");
 require_once  __ROOT__.'/class.Model.php';
 
 
