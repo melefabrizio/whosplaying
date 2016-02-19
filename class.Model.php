@@ -1,4 +1,5 @@
 <?php
+require  __ROOT__.'/meekrodb.2.2.class.php';
 
 
 class Modello {
