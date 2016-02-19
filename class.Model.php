@@ -39,7 +39,7 @@ class Modello {
 		if(!strpos($imploded, $new)){
 			
 			#str_replace('"','',$f);
-			print_r("\n prima:".$f);
+			print_r("\n prima:".$imploded);
 		
 
 			array_push($f,$new.'-');
