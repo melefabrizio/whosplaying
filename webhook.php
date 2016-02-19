@@ -19,6 +19,7 @@ if($arrayReceived[0]=='/whosplaying') {
 	}else if(checkGroup($arrayReceived[1])){
 		$group = $arrayReceived[1];
 		$reply = $group;
+		$reply .= getStats($group);
 		try{
 			$command = $arrayReceived[2];
 			$summoner = $arrayReceived[3];
@@ -33,7 +34,8 @@ if($arrayReceived[0]=='/whosplaying') {
 				
 			}
 		}catch (Exception $e){
-			$reply .= getStats($group);
+			//$reply .= "eccezione";
+			//$reply .= getStats($group);
 		}
 		//Ciclo sull'edit/view del gruppo
 	}else $reply = "Scusa, non capisco";
