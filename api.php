@@ -1,5 +1,5 @@
 <?php
-set_include_path(__DIR__);
+set_include_path('/var/www/whos');
 define('__ROOT__', __DIR__); 
 require_once  __ROOT__.'/meekrodb.2.2.class.php';
 require  __ROOT__.'/conf.php';
