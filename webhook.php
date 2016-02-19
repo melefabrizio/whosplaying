@@ -21,7 +21,8 @@ function checkGroup($name){
 }
 
 function getStats($group){
-	$following = $mod->getFollowing($group);
+	$localMod = new Modello();
+	$following = $localMod->getFollowing($group);
 	$following = implode(', ', $following);
 	return "Statistiche del gruppo ".$group.", a cui appartengono: ".$following;
 }
