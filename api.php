@@ -1,9 +1,9 @@
 <?php
-
-require_once 'Rito.php';
-require_once 'APIClass.class.php';
-require_once 'ConcreteApi.php';
-require_once 'class.Model.php';
+define('__ROOT__', dirname(dirname(__FILE__))); 
+require_once __ROOT__.'/Rito.php';
+require_once  __ROOT__.'/APIClass.class.php';
+require_once  __ROOT__.'/ConcreteApi.php';
+require_once  __ROOT__.'/class.Model.php';
 
 global  $model;
 $model = new Modello();

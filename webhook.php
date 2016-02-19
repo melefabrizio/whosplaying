@@ -1,5 +1,5 @@
 <?php 
-require_once 'conf.php';
+require_once  __ROOT__.'/conf.php';
 // read incoming info and grab the chatID
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);

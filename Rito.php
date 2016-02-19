@@ -1,5 +1,5 @@
 <?php 
-require_once 'conf.php';
+require_once  __ROOT__.'/conf.php';
 class Rito{
 
 	

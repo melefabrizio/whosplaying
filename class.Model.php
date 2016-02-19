@@ -1,7 +1,7 @@
 <?php
 
-require_once 'meekrodb.2.2.class.php';
-require_once 'conf.php';
+require_once  __ROOT__.'/meekrodb.2.2.class.php';
+require_once  __ROOT__.'/conf.php';
 class Modello {
 
 	public $name;
