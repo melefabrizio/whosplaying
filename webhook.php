@@ -51,7 +51,7 @@ function sendMessage($message){
 }
 function checkGroup($name){
 	$group = $mod->getUser($name);
-	return $group!=null?true:false;
+	return $group;
 }
 
 function getStats($group){
