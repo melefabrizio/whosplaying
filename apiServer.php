@@ -2,8 +2,8 @@
 set_include_path('/var/www/whos');
 define('__ROOT__', __DIR__); 
 require_once  __ROOT__.'/meekrodb.2.2.class.php';
-require  __ROOT__.'/conf.php';
-include  __ROOT__.'/Rito.php';
+require_once  __ROOT__.'/conf.php';
+require_once  __ROOT__.'/Rito.php';
 require_once  __ROOT__.'/APIClass.class.php';
 require_once __ROOT__.'/ConcreteAPI.php';
 require_once  __ROOT__.'/class.Model.php';
