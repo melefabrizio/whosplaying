@@ -10,18 +10,16 @@ $messageReceived = $update['message']['text'];
 
 if($messageReceived == "/pippo"){
 	$mod = new Modello();
-	sendMessage($mod->getFollowing("pippo"));
-}
+	$reply = sendMessage($mod->getFollowing("pippo"));
+}else $reply = "Non capisco"
 // compose reply
-$reply =  sendMessage();
 		
 // send reply
 $sendto =API_URL."sendmessage?chat_id=".$chatID."&text=".$reply;
 file_get_contents($sendto);
 
-function sendMessage($str){
-$message = $str;
-return $message;
+function sendMessage($message){
+	return $message;
 }
 
 ?>
