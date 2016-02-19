@@ -11,7 +11,7 @@ $messageReceived = $update['message']['text'];
 if($messageReceived == "/pippo"){
 	$mod = new Modello();
 	$reply = sendMessage($mod->getFollowing("pippo"));
-}else $reply = "Non capisco"
+}else $reply = "Non capisco";
 // compose reply
 		
 // send reply
