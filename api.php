@@ -1,5 +1,5 @@
 <?php
-define('__ROOT__', dirname(dirname(__FILE__))); 
+define('__ROOT__', dirname(__FILE__)); 
 require_once __ROOT__.'/Rito.php';
 require_once  __ROOT__.'/APIClass.class.php';
 require_once  __ROOT__.'/ConcreteApi.php';
