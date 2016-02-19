@@ -35,8 +35,8 @@ if($arrayReceived[0]=='/whosplaying') {
 		$reply = $res?"Ok, il gruppo ".$name." è pronto!":"Oops, abbiamo un problema";
 	}else if(checkGroup($arrayReceived[1])){
 		$group = $arrayReceived[1];
-		$reply = $group;
-		$reply .= getStats($group);
+		
+		$reply = getStats($group);
 		try{
 			$command = $arrayReceived[2];
 			$summoner = $arrayReceived[3];
