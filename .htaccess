@@ -1,4 +1,8 @@
+<Directory .>
+AllowOverride all
+</Directory>
 <IfModule mod_rewrite.c>
+
 RewriteEngine On
 
 
