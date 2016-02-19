@@ -16,7 +16,7 @@ class Modello {
 	#GET utente a partire dal nome
 
 	 public function getUser($name){
-	 	$data = DB::query("SELECT * from following where name = %s;", $name);
+	 	$data = DB::query("SELECT name from following where name = %s;", $name);
 	 	return json_encode($data);
 	}
 
