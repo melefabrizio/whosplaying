@@ -12,7 +12,7 @@ class Modello {
 	DB::$dbName = DBNAME;
 
 	$this->name = "fatto";
-}
+	}
 	#GET utente a partire dal nome
 
 	 public function getUser($name){
