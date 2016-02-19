@@ -6,16 +6,16 @@ RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule api/utente/(.*)/(.*)/unfollow$ api.php?request=utente&nome=$1&following=$2&unfollow=1   [L]
+RewriteRule api/v0.1/utente/(.*)/(.*)/unfollow$ api.php?request=utente&nome=$1&following=$2&unfollow=1   [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule api/utente/(.*)/(.*)$ api.php?request=utente&nome=$1&following=$2   [L]
+RewriteRule api/v0.1/utente/(.*)/(.*)$ api.php?request=utente&nome=$1&following=$2   [L]
 
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule api/utente/(.*) api.php?request=utente&nome=$1   [L]
+RewriteRule api/v0.1/utente/(.*) api.php?request=utente&nome=$1   [L]
 
 
 
