@@ -1,6 +1,4 @@
 <?php
-require_once  __ROOT__.'/Rito.php';
-require_once  __ROOT__.'/APIClass.class.php';
 
 class MyAPI extends APIClass{
 

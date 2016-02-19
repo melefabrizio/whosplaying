@@ -1,5 +1,7 @@
 <?php
 define('__ROOT__', dirname(__FILE__)); 
+require_once  __ROOT__.'/meekrodb.2.2.class.php';
+require_once  __ROOT__.'/conf.php';
 require_once __ROOT__.'/Rito.php';
 require_once  __ROOT__.'/APIClass.class.php';
 require_once  __ROOT__.'/ConcreteApi.php';
