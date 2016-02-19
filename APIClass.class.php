@@ -80,7 +80,7 @@ abstract class APIClass
         if (method_exists($this, $this->endpoint)) {
             return $this->_response($this->{$this->endpoint}($this->args));
         }
-        return $this->_response("No Endpoint: $this->endpoint", 404);
+        return $this->_response("No Endpoint: $this->endpoint", 200);
     }
 
     private function _response($data, $status = 200) {
