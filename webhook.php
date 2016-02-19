@@ -50,8 +50,8 @@ function sendMessage($message){
 	return $message;
 }
 function checkGroup($name){
-	$group = $mod->getUser($name);
-	return $group;
+	//$group = $mod->getUser($name);
+	return true;
 }
 
 function getStats($group){
