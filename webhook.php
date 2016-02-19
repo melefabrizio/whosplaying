@@ -32,7 +32,7 @@ if(strpos("/whosplaying",$messageReceived) ){
 				
 			}
 		}catch (Exception $e){
-			$reply = getStats($group):
+			$reply = getStats($group);
 		}
 		//Ciclo sull'edit/view del gruppo
 	}else $reply = "Scusa, non capisco";
