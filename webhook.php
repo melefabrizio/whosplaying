@@ -18,7 +18,7 @@ if($messageReceived == "/pippo"){
 $sendto =API_URL."sendmessage?chat_id=".$chatID."&text=".$reply;
 
 file_get_contents($sendto);
-
+die("fine!");
 function sendMessage($message){
 	return $message;
 }
