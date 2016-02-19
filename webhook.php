@@ -1,7 +1,7 @@
 <?php 
 define('__ROOT__', __DIR__); 
 require_once  __ROOT__.'/conf.php';
-require_once __ROOT__.'/apiServer.php';
+require_once  __ROOT__.'/class.Model.php';
 // read incoming info and grab the chatID
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
