@@ -11,7 +11,7 @@ $messageReceived = $update['message']['text'];
 $arrayReceived = explode(' ', $messageReceived);
 $mod = new Modello();
 $reply = 'Da qualche parte qualcosa è andato storto';
-if($arrayReceived[0]=='/whosplaying') ){
+if($arrayReceived[0]=='/whosplaying') {
 	if($arrayReceived[1] == 'create'){
 		$name = $arrayReceived[2];
 		$res = createGroup($name);
