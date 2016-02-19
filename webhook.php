@@ -10,29 +10,30 @@ $chatID = $update["message"]["chat"]["id"];
 $messageReceived = $update['message']['text'];
 $arrayReceived = explode(' ', $messageReceived);
 $mod = new Modello();
-
-if(strpos("/whosplaying",$messageReceived) ){
+$reply = 'Da qualche parte qualcosa è andato storto';
+if($arrayReceived[0]=='/whosplaying') ){
 	if($arrayReceived[1] == 'create'){
 		$name = $arrayReceived[2];
 		$res = createGroup($name);
 		$reply = $res?"Ok, il gruppo ".$name." è pronto!":"Oops, abbiamo un problema";
 	}else if(checkGroup($arrayReceived[1])){
 		$group = $arrayReceived[1];
+		$reply = $group;
 		try{
 			$command = $arrayReceived[2];
 			$summoner = $arrayReceived[3];
 			switch ($command) {
 				case 'add':
-					$reply = $mod->addFollowing($group,$summoner);
+					$reply .= $mod->addFollowing($group,$summoner);
 					break;
 				case 'remove':
-					$reply = $mod->removeFollowing($group,$summoner);
+					$reply .= $mod->removeFollowing($group,$summoner);
 
 					break;
 				
 			}
 		}catch (Exception $e){
-			$reply = getStats($group);
+			$reply .= getStats($group);
 		}
 		//Ciclo sull'edit/view del gruppo
 	}else $reply = "Scusa, non capisco";
