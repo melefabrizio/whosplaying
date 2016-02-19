@@ -10,7 +10,7 @@ $messageReceived = $update['message']['text'];
 
 if($messageReceived == "/pippo"){
 	$mod = new Modello();
-	$reply = sendMessage(implode(', ',$mod->getFollowing("pippo"));
+	$reply = sendMessage(implode(', ',$mod->getFollowing("pippo")));
 }else $reply = "Non capisco";
 // compose reply
 		
