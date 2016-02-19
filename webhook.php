@@ -11,12 +11,12 @@ $messageReceived = $update['message']['text'];
 $arrayReceived = explode(' ', $messageReceived);
 $mod = new Modello();
 
-if(strpos("/whosplaying",$messageReceived){
+if(strpos("/whosplaying",$messageReceived) ){
 	if($arrayReceived[1] == 'create'){
 		$name = $arrayReceived[2];
 		$res = createGroup($name);
 		$reply = $res?"Ok, il gruppo ".$name." è pronto!":"Oops, abbiamo un problema";
-	}else if(checkGroup($arrayReceived[1]){
+	}else if(checkGroup($arrayReceived[1])){
 		$group = $arrayReceived[1];
 		try{
 			$command = $arrayReceived[2];
