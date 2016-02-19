@@ -10,6 +10,21 @@ $chatID = $update["message"]["chat"]["id"];
 $messageReceived = $update['message']['text'];
 $arrayReceived = explode(' ', $messageReceived);
 $mod = new Modello();
+
+
+function sendMessage($message){
+	return $message;
+}
+function checkGroup($name){
+	//$group = $mod->getUser($name);
+	return true;
+}
+
+function getStats($group){
+	$following = implode(', ',$mod->getFollowing($group));
+	return "Statistiche del gruppo ".$group.", a cui appartengono: ".$following;
+}
+
 $reply = 'Da qualche parte qualcosa è andato storto';
 if($arrayReceived[0]=='/whosplaying') {
 	if($arrayReceived[1] == 'create'){
@@ -49,17 +64,5 @@ $sendto =API_URL."sendmessage?chat_id=".$chatID."&text=".$reply;
 
 file_get_contents($sendto);
 die("fine!");
-function sendMessage($message){
-	return $message;
-}
-function checkGroup($name){
-	//$group = $mod->getUser($name);
-	return true;
-}
-
-function getStats($group){
-	$following = implode(', ',$mod->getFollowing($group));
-	return "Statistiche del gruppo ".$group.", a cui appartengono: ".$following;
-}
 
 ?>
