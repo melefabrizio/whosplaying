@@ -9,7 +9,7 @@ $chatID = $update["message"]["chat"]["id"];
 $messageReceived = $update['message']['text'];
 
 if($messageReceived == "/pippo"){
-	$mode = new Modello();
+	$mod = new Modello();
 	sendMessage($mod->getFollowing("pippo"));
 }
 // compose reply
